@@ -18,4 +18,14 @@ public final class Constants {
 	public static final String TOY = "toy";
 	public static final String BOYTOY = "boytoy";
 	public static final String GIRLTOY = "girltoy";
+	
+	public static final String MBO = "Maxi Best Of";
+	public static final String BO = "Best Of";
+	public static final String HM = "Happy Meal";
+	public static final String GM = "Golen Menu";
+	
+	public static final String LARGE = "large";
+	public static final String MEDIUM = "medium";
+	public static final String SMALL = "small";
+	
 }

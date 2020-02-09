@@ -1,6 +1,6 @@
 package com.tactfactory.designpattern.controle.entities.items;
 
-public class PotatoesComplement extends Complement{
+public class PotatoesComplement extends Complement{	
 	public PotatoesComplement(String size) {
 		this.name = "Potatoes";
 		switch (size) {
@@ -10,8 +10,11 @@ public class PotatoesComplement extends Complement{
 		case "medium":
 			this.price = 2.7F;
 			break;
-		default:
+		case "large":
 			this.price = 2.95F;
+			break;
+		default:
+			this.price = 0;
 			break;
 		}
 	}

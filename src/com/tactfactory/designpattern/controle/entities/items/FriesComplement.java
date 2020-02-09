@@ -1,6 +1,6 @@
 package com.tactfactory.designpattern.controle.entities.items;
 
-public class FriesComplement extends Complement{
+public class FriesComplement extends Complement{	
 	public FriesComplement(String size) {
 		this.name = "Fries";
 		switch (size) {
@@ -10,8 +10,11 @@ public class FriesComplement extends Complement{
 		case "medium":
 			this.price = 2.7F;
 			break;
-		default:
+		case "large":
 			this.price = 2.95F;
+			break;
+		default:
+			this.price = 0;
 			break;
 		}
 	}

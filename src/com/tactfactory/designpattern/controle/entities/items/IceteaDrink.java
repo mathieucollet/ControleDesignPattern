@@ -9,8 +9,11 @@ public class IceteaDrink extends Drink {
 			break;
 		case "medium":
 			this.price = 2.7F;
-		default:
+		case "large":
 			this.price = 2.95F;
+			break;
+		default:
+			this.price = 0;
 			break;
 		}
 	}
