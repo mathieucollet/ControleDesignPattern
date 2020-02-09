@@ -66,5 +66,14 @@ public class DetailsSelection extends JFrame {
     this.home = home;
     meal = home.getMeal();
     home.setVisible(false);
+    meal.showItems();
+    commandDetails.setText(meal.toString());
+
+    float TVAf = (meal.getCost() / 100) * 20;
+    float TTCf = meal.getCost() + TVAf;
+    String costHT = Float.toString(meal.getCost());
+    String costTTC  = Float.toString(TTCf);
+    
+    price.setText("Price HT: " + costHT +" / " + "Price TTC: " + costTTC);
   }
 }

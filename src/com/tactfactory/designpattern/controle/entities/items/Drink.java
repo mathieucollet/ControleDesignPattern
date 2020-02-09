@@ -26,7 +26,7 @@ public abstract class Drink implements Item {
 
 	@Override
 	public String toString() {
-		return "Drink => " + name + ", packing=" + packing + ", price=" + price + '}';
+		return "Name : " + name + ", Packing : " + packing + ", Price : " + price;
 	}
 
 }

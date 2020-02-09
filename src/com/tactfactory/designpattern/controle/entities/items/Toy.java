@@ -26,7 +26,7 @@ public abstract class Toy implements Item {
 
 	@Override
 	public String toString() {
-		return "Toy => " + name + ", packing=" + packing + ", price=" + price + '}';
+		return "Name : " + name + ", Packing : " + packing + ", Price : " + price;
 	}
 
 }

@@ -29,7 +29,7 @@ public abstract class Burger implements Item {
 
 	@Override
 	public String toString() {
-		return "Burger => " + name + ", packing=" + packing + ", price=" + price + '}';
+		return  "Name : " + name + ", Packing : " + packing + ", Price : " + price;
 	}
 
 }

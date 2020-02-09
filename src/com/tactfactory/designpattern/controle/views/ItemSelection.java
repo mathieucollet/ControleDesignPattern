@@ -9,6 +9,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import com.tactfactory.designpattern.controle.entities.Meal;
+import com.tactfactory.designpattern.controle.entities.MealBuilder;
+import com.tactfactory.designpattern.controle.entities.items.BigmacBurger;
+import com.tactfactory.designpattern.controle.entities.items.CboBurger;
+import com.tactfactory.designpattern.controle.entities.items.CocacolaDrink;
+import com.tactfactory.designpattern.controle.entities.items.FriesComplement;
+import com.tactfactory.designpattern.controle.entities.items.IceteaDrink;
+import com.tactfactory.designpattern.controle.entities.items.PotatoesComplement;
 
 public class ItemSelection extends JFrame {
 
@@ -35,6 +42,8 @@ public class ItemSelection extends JFrame {
   private JButton potatoesBig = new JButton("PotatoesBig");
 
   private JButton validate = new JButton("Valider");
+  
+  final MealBuilder mealBuilder = new MealBuilder();
 
   public ItemSelection() {
     this.setTitle("Items");
@@ -84,13 +93,90 @@ public class ItemSelection extends JFrame {
   private void bindActions() {
 
     // Actions code here
-//    JButton.addActionListener(new ActionListener() {
-//
-//      @Override
-//      public void actionPerformed(ActionEvent e) {
-//        // Do something
-//      }
-//    });
+	burger1.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new BigmacBurger());
+      }
+    });
+	burger2.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new CboBurger());
+      }
+    });
+	drink1Small.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new CocacolaDrink("small"));
+      }
+    });
+	drink1Medium.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new CocacolaDrink("medium"));
+      }
+    });
+	drink1Big.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new CocacolaDrink("big"));
+      }
+    });
+	drink2Small.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new IceteaDrink("small"));
+      }
+    });
+	drink2Medium.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new IceteaDrink("medium"));
+      }
+    });
+	drink2Big.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new IceteaDrink("big"));
+      }
+    });
+	friesSmall.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new FriesComplement("small"));
+      }
+    });
+	friesMedium.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new FriesComplement("medium"));
+      }
+    });
+	friesBig.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new FriesComplement("big"));
+      }
+    });
+	potatoesSmall.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new PotatoesComplement("small"));
+      }
+    });
+	potatoesMedium.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new PotatoesComplement("medium"));
+      }
+    });
+	potatoesBig.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+    	  meal = mealBuilder.addItem(new PotatoesComplement("big"));
+      }
+    });
 
     validate.addActionListener(new ActionListener() {
 

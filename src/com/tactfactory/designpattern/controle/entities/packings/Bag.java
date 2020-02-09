@@ -8,5 +8,9 @@ public class Bag implements Packing {
 	public String pack() {
 		return "Bag";
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Bag";
+	}
 }

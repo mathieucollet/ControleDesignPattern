@@ -26,7 +26,7 @@ public abstract class Complement implements Item {
 
 	@Override
 	public String toString() {
-		return "Complement => " + name + ", packing=" + packing + ", price=" + price + '}';
+		return "Name : " + name + ", Packing : " + packing + ", Price : " + price;
 	}
 
 }

@@ -36,5 +36,12 @@ public class Meal {
       System.out.println(", Price : " + item.price());
     }
   }
+
+	@Override
+	public String toString() {
+		return "items : " + items;
+	}
+  
+  
 }
 

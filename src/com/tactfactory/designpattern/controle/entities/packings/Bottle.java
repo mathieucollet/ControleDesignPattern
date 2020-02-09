@@ -9,4 +9,8 @@ public class Bottle implements Packing {
 		return "Bottle";
 	}
 
+	@Override
+	public String toString() {
+		return "Bottle";
+	}
 }
