@@ -6,7 +6,7 @@ import com.tactfactory.designpattern.controle.entities.items.CboBurger;
 import com.tactfactory.designpattern.controle.utils.Constants;
 
 public class GoldenMenu extends Menu {
-	Burger burger2;
+	protected Burger burger2;
 	
 	public GoldenMenu() {}
 	
@@ -30,6 +30,14 @@ public class GoldenMenu extends Menu {
 			break;
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Name=" + name + ", packing=" + packing + ", burger=" + burger + ", burger2=" + burger + ", complement=" + complement
+				+ ", drink=" + drink + ", price=" + price;
+	}
+	
+	
 	
 
 }

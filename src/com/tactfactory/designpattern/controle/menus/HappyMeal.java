@@ -6,7 +6,7 @@ import com.tactfactory.designpattern.controle.entities.items.Toy;
 import com.tactfactory.designpattern.controle.utils.Constants;
 
 public class HappyMeal extends Menu {
-	Toy toy;
+	protected Toy toy;
 	
 	public HappyMeal() {}
 	
@@ -30,6 +30,14 @@ public class HappyMeal extends Menu {
 			break;
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Name=" + name + ", packing=" + packing + ", burger=" + burger + ", complement=" + complement
+				+ ", drink=" + drink + ", toy=" + toy + ", price=" + price;
+	}
+	
+	
 	
 
 }

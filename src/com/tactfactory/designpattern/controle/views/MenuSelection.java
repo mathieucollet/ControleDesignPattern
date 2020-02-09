@@ -9,6 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import com.tactfactory.designpattern.controle.entities.Meal;
+import com.tactfactory.designpattern.controle.entities.MealBuilder;
+import com.tactfactory.designpattern.controle.factories.MenuFactory;
+import com.tactfactory.designpattern.controle.menus.Menu;
+import com.tactfactory.designpattern.controle.utils.Constants;
 
 public class MenuSelection extends JFrame {
 
@@ -28,7 +32,14 @@ public class MenuSelection extends JFrame {
   private JButton potatoes = new JButton("Potatoes");
 
   private JButton validate = new JButton("Valider");
-
+  
+  private String menuName;
+  private String burger1Name;
+  private String burger2Name;
+  private String complementName;
+  private String drinkName;
+  private String toyName;
+  
   public MenuSelection() {
     this.setTitle("Menu");
     this.setSize(400, 200);
@@ -73,23 +84,72 @@ public class MenuSelection extends JFrame {
   }
 
   private void bindActions() {
-
+	  
     // Actions code here
-//    JButton.addActionListener(new ActionListener() {
-//
-//      @Override
-//      public void actionPerformed(ActionEvent e) {
-//        // Do something
-//      }
-//    });
+	bestOf.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+    	  menuName = Constants.BO;
+      }
+    });
+	maxiBestOf.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+    	  menuName = Constants.MBO;
+      }
+    });
+	burger1.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+		burger1Name = Constants.BIGMAC;
+      }
+    });
+	burger2.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+		burger1Name = Constants.CBO;
+      }
+    });
+	drink1.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+    	  drinkName = Constants.COCACOLA;
+      }
+    });
+	drink2.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+		drinkName = Constants.ICETEA;
+      }
+    });
+	fries.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+    	  complementName = Constants.FRIES;
+      }
+    });
+	potatoes.addActionListener(new ActionListener() {
+	@Override
+      public void actionPerformed(ActionEvent e) {
+		complementName = Constants.POTATOES;
+      }
+    });
+	
+	
 
     validate.addActionListener(new ActionListener() {
 
       @Override
       public void actionPerformed(ActionEvent e) {
-        home.setMeal(meal);
-        home.setVisible(true);
-        MenuSelection.this.dispose();
+		  MenuFactory mf = new MenuFactory();
+	      MealBuilder builder = new MealBuilder();
+	      
+	      Menu menu = mf.create(menuName, burger1Name, complementName, drinkName);
+	      builder.addItem(menu);
+	      meal.showItems();
+			home.setMeal(meal);
+			home.setVisible(true);
+			MenuSelection.this.dispose();
       }
     });
   }
