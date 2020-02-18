@@ -91,11 +91,7 @@ public class Meal {
 		String txt = "";
 		int i = 1;
 		for (Item item : items) {
-<<<<<<< Updated upstream
-			txt += "N�" + i + " : " + (item instanceof Menu ? "Menu " : "") + item.name() + "\n";
-=======
 			txt += "N°" + i + " : " + (item instanceof Menu ? "Menu " : "") + item.name() + "\n";
->>>>>>> Stashed changes
 			if (item instanceof Menu) {
 				txt += ((Menu) item) + "\n";
 			}
@@ -110,8 +106,4 @@ public class Meal {
 		return txt;
 	}
 
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
