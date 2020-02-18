@@ -1,15 +1,19 @@
 package com.tactfactory.designpattern.controle.entities.items;
 
+import com.tactfactory.designpattern.controle.utils.Constants;
+
 public class IceteaDrink extends Drink {
 	public IceteaDrink(String size) {
-		this.name = "Ice-Tea";
+		this.name = Constants.ICETEA;
+		this.size = size;
 		switch (size) {
-		case "small":
+		case Constants.SMALL:
 			this.price = 2.2F;
 			break;
-		case "medium":
+		case Constants.MEDIUM:
 			this.price = 2.7F;
-		case "large":
+			break;
+		case Constants.LARGE:
 			this.price = 2.95F;
 			break;
 		default:

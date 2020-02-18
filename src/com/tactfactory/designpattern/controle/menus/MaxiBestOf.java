@@ -7,7 +7,7 @@ public class MaxiBestOf extends Menu {
 	public MaxiBestOf() {}
 	
 	public MaxiBestOf(String burger, String complement, String drink) {
-		this.name = "Maxi Best Of";
+		this.name = Constants.MBO;
 		this.price = 9.5F;
 		this.size = Constants.LARGE;
 		

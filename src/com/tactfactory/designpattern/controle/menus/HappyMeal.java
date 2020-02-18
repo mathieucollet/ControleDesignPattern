@@ -1,7 +1,5 @@
 package com.tactfactory.designpattern.controle.menus;
 
-import com.tactfactory.designpattern.controle.entities.items.BoyToy;
-import com.tactfactory.designpattern.controle.entities.items.GirlToy;
 import com.tactfactory.designpattern.controle.entities.items.Toy;
 import com.tactfactory.designpattern.controle.utils.Constants;
 
@@ -11,33 +9,14 @@ public class HappyMeal extends Menu {
 	public HappyMeal() {}
 	
 	public HappyMeal(String burger, String complement, String drink, String toy) {
-		this.name = "Best Of";
-		this.price = 8.9F;
-		this.size = Constants.MEDIUM;
+		this.name = Constants.HM;
+		this.price = 6F;
+		this.size = Constants.SMALL;
 		
 		setBurger(burger);
 		setComplement(complement);
 		setDrink(drink);
+		setToy(toy);
 		
-		switch (toy) {
-		case Constants.BOYTOY:
-			this.toy = new BoyToy();
-			break;
-		case Constants.GIRLTOY:
-			this.toy = new GirlToy();
-		default:
-			this.toy = null;
-			break;
-		}
 	}
-
-	@Override
-	public String toString() {
-		return "Name=" + name + ", packing=" + packing + ", burger=" + burger + ", complement=" + complement
-				+ ", drink=" + drink + ", toy=" + toy + ", price=" + price;
-	}
-	
-	
-	
-
 }

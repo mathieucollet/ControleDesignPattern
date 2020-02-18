@@ -7,6 +7,7 @@ import com.tactfactory.designpattern.controle.entities.packings.Box;
 public abstract class Complement implements Item {
 	protected String name;
     protected Packing packing = new Box();
+    protected String size;
     protected float price;
 
 	@Override
@@ -17,6 +18,11 @@ public abstract class Complement implements Item {
 	@Override
 	public Packing packing() {
 		return this.packing;
+	}
+	
+	@Override
+	public String size() {
+		return this.size;
 	}
 
 	@Override
