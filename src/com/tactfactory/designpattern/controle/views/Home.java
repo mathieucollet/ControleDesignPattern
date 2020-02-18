@@ -8,19 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.tactfactory.designpattern.controle.entities.Meal;
-
 public class Home extends JFrame {
-
-  private Meal meal = new Meal();
-
-  public void setMeal(Meal meal) {
-    this.meal = meal;
-  }
-
-  public Meal getMeal() {
-    return meal;
-  }
 
   private JButton menus = new JButton("Menus");
   private JButton addItem = new JButton("Element seul");
@@ -29,7 +17,7 @@ public class Home extends JFrame {
   public Home() {
 
     this.setTitle("Home");
-    this.setSize(400, 200);
+    this.setSize(1200, 800);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     bindActions();

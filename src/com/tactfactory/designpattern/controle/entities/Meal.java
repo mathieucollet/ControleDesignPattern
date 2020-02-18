@@ -91,7 +91,7 @@ public class Meal {
 		String txt = "";
 		int i = 1;
 		for (Item item : items) {
-			txt += "N°" + i + " : " + (item instanceof Menu ? "Menu " : "") + item.name() + "\n";
+			txt += "Nï¿½" + i + " : " + (item instanceof Menu ? "Menu " : "") + item.name() + "\n";
 			if (item instanceof Menu) {
 				txt += ((Menu) item) + "\n";
 			}
